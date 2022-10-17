@@ -1,6 +1,3 @@
-import {VscStarFull} from "react-icons/vsc"
-
-
 import { config } from "../../mocks/cards";
 
 
