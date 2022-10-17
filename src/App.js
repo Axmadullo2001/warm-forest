@@ -1,6 +1,6 @@
-import Header from "./Layouts/Header";
+import Header from "./components/Header";
 import CardList from './components/CardList';
-import Footer from "./Layouts/Footer";
+import Footer from "./components/Footer";
 
 
 import './App.css';
