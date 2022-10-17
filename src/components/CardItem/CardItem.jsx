@@ -1,11 +1,14 @@
 import {VscStarFull} from "react-icons/vsc"
+
+
 import { config } from "../../mocks/cards";
+
+
 
 import "./CardItem.css";
 
 
 const CardItem = ({img, name, price, reviews}) => {
-
 
 
     return (
@@ -18,11 +21,12 @@ const CardItem = ({img, name, price, reviews}) => {
                 <p className='card-item__name'><a  className='card-item__name-link' href="/">{ name }</a></p>
                 <div className='card-item__reviews'>
                     {config.map(star => (
-                        <span><VscStarFull color='#f0c040' size={'14px'}/></span>
+                        <img className="card-item__star" key={ star.id } src={ star.src } alt={''} />
                     ))}
+
                     <span className='card-item__reviews'>{ reviews } reviews</span>
                 </div>
-                <span className='card-item__price'>${ price }</span>
+                <p className='card-item__price'>${ price }</p>
 
             </div>
         </div>

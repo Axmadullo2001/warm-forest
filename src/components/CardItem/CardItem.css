@@ -33,6 +33,7 @@
 
 .card-item__name {
     margin-left: 4px;
+    margin-top: 15px;
     padding-bottom: 8px;
 }
 
@@ -44,16 +45,28 @@
     margin: 20px 0 0px 6px;
 }
 
+.card-item__star {
+    width: 18px;
+    height: 18px;
+    margin: 0 1px;
+}
+
 
 .card-item__reviews {
     display: flex;
     font-size: 17px;
     padding-left: 8px;
     padding-bottom: 1px;
+    margin-top: 13px;
+}
+
+.card-item__star {
+    margin-top: 12px;
 }
 
 .card-item__price {
     padding-left: 10px;
+    margin-top: 10px;
     font-size: 22px;
 }
 

@@ -10,6 +10,7 @@ import img_4 from "../assets/4.jpg"
 import img_5 from "../assets/5.jpg"
 import img_6 from "../assets/6.jpg"
 
+import star from "../assets/star.svg";
 
 export const goods = [
     {id: v4(), name: "Nike Slim Shirt", price: 120, reviews: 0, img: img_1},
@@ -22,10 +23,10 @@ export const goods = [
 
 
 
-
 export const config = [
-    <VscStarFull color='#f0c040' size={'14px'}/>,
-    <VscStarFull color='#f0c040' size={'14px'}/>,
-    <VscStarFull color='#f0c040' size={'14px'}/>,
-    <VscStarFull color='#f0c040' size={'14px'}/>
+    {id: v4(), src: star},
+    {id: v4(), src: star},
+    {id: v4(), src: star},
+    {id: v4(), src: star},
 ];
+
