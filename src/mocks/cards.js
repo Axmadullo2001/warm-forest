@@ -1,8 +1,5 @@
 import { v4 } from "uuid"
 
-import { VscStarFull } from "react-icons/vsc"
-
-
 import img_1 from "../assets/1.jpg"
 import img_2 from "../assets/2.jpg"
 import img_3 from "../assets/3.jpg"
