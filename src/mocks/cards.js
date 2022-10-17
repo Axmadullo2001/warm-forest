@@ -1,5 +1,7 @@
 import { v4 } from "uuid"
 
+import { VscStarFull } from "react-icons/vsc"
+
 
 import img_1 from "../assets/1.jpg"
 import img_2 from "../assets/2.jpg"
@@ -16,8 +18,14 @@ export const goods = [
     {id: v4(), name: "Adidas Fit Shirt", price: 100, reviews: 0, img: img_4},
     {id: v4(), name: "Adidas Fit Pant", price: 139, reviews: 0, img: img_5},
     {id: v4(), name: "Nike Slim Shirt", price: 78, reviews: 0, img: img_6},
-]
+];
 
 
 
 
+export const config = [
+    <VscStarFull color='#f0c040' size={'14px'}/>,
+    <VscStarFull color='#f0c040' size={'14px'}/>,
+    <VscStarFull color='#f0c040' size={'14px'}/>,
+    <VscStarFull color='#f0c040' size={'14px'}/>
+];
