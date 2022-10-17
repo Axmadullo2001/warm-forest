@@ -1,0 +1,33 @@
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #203040;
+    margin-bottom: 10px;
+}
+
+.header__logo {
+    padding: 10px;
+}
+
+.header__logo-zankoo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header__card-signin {
+    padding-top: 20px;
+}
+
+.header__card, .header__sign-in {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+
+

@@ -1,9 +1,18 @@
+import Header from "./Layouts/Header";
+import CardList from './components/CardList';
+import Footer from "./Layouts/Footer";
+
+
 import './App.css';
 
-function App() {
+
+const App = () => {
+
   return (
     <div className="App">
-      <h2>Hello Axmadullo</h2>
+      <Header />
+      <CardList />
+      <Footer />
     </div>
   );
 }
