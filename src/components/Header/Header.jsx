@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../styles/Header.css";
+import "./Header.css";
 
 
 const Header = () => {
@@ -10,8 +10,8 @@ const Header = () => {
         <a href="/" className='header__logo-zankoo'>Zankoo</a>
       </div>
       <div className="header__card-signin">
-        <a href="/" className='header__card'>Cart</a>
-        <a href="/" className='header__sign-in'>Sign In</a>
+        <button className='header__card'>Cart</button>
+        <button className='header__sign-in'>Sign In</button>
       </div>
     </div>
   )

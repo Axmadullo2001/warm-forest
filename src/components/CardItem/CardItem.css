@@ -1,5 +1,12 @@
+:root {
+    --border-bg-color:  rgb(179, 179, 179);
+    --card_body-bg-color: #f8f8f8;
+    --card-text-color: #2020a0;
+}
+
+
 .card-item {
-    border: 1px solid rgb(179, 179, 179);
+    border: 1px solid var(--border-bg-color);
     margin: 10px;
     border-radius: 5px;
     width: 300px;
@@ -20,7 +27,7 @@
 }
 
 .card-item__body {
-    background-color: #f8f8f8;
+    background-color: var(--card_body-bg-color);
     padding: 20px 0 14px 6px;
 }
 
@@ -32,7 +39,7 @@
 .card-item__name-link {
     font-size: 17px;
     text-decoration: none;
-    color: #2020a0;
+    color: var(--card-text-color);
     font-weight: bold;
     margin: 20px 0 0px 6px;
 }

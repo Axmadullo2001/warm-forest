@@ -1,9 +1,13 @@
+:root {
+    --link-hover-item: #ff8000;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-a:hover {
-    color: #ff8000;
+a:hover, button:hover {
+    color: var(--link-hover-item);
 }
 
 

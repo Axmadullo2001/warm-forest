@@ -1,9 +1,14 @@
+:root {
+    --layout-bg-color: #203040;
+    --layout-text-color: #fff;
+}
+
 .header {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
-    background-color: #203040;
+    background-color: var(--layout-bg-color);
     margin-bottom: 10px;
 }
 
@@ -15,7 +20,7 @@
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
-    color: #fff;
+    color: var(--layout-text-color);
 }
 
 .header__card-signin {
@@ -23,11 +28,16 @@
 }
 
 .header__card, .header__sign-in {
-    color: #fff;
-    padding: 10px;
+    color: var(--layout-text-color);
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
     text-decoration: none;
 
 }
+
 
 
 
