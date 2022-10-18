@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import "./assets/var.css";
 import './App.css';
 
-
 const App = () => {
 
   return (
@@ -18,4 +17,3 @@ const App = () => {
 }
 
 export default App;
-

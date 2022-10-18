@@ -16,12 +16,9 @@ export const goods = [
     {id: 6, name: "Nike Slim Shirt", price: 78, reviews: 0, img: img_6},
 ];
 
-
-
 export const config = [
     {id: 1, src: star},
     {id: 2, src: star},
     {id: 3, src: star},
     {id: 4, src: star},
 ];
-

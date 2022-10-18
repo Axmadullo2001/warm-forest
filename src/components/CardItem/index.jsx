@@ -1,12 +1,9 @@
-import { config } from "../../mocks/cards";
-
-
-
+import { config } from "../../mocks";
 import "./CardItem.css";
 
 
-const CardItem = ({img, name, price, reviews}) => {
-
+const CardItem = (props) => {
+    const { img, name, price, reviews } = props
 
     return (
         <div className='card-item'>
@@ -31,5 +28,3 @@ const CardItem = ({img, name, price, reviews}) => {
 }
 
 export default CardItem
-
-

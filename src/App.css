@@ -5,5 +5,3 @@ body {
 a:hover, button:hover {
     color: var(--link-hover-item);
 }
-
-

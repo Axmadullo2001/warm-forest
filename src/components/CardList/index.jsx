@@ -1,15 +1,10 @@
 import React from 'react'
-
 import CardItem from "../CardItem"
 
-import { goods } from '../../mocks/cards'
-
-
+import { goods } from '../../mocks/'
 import "./CardList.css";
 
-
 const CardList = () => {
-
     return (
         <div className="cardlist-container">
             {goods.map((good) => (
@@ -20,6 +15,3 @@ const CardList = () => {
 }
 
 export default CardList
-
-
-
