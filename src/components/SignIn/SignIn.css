@@ -1,0 +1,95 @@
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 580px;
+    height: calc(100vh - 125px);
+}
+
+.sign-in__title {
+    font-size: 18px;
+    margin-top: 26px;
+}
+
+.sign-in__email-content {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 20px;
+}
+
+.sign-in__email-label {
+    margin-bottom: 10px;
+}
+
+.sign-in__email {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.4px solid var(--border-input-color);
+}
+
+.sign-in__email:hover {
+    border-color:  var( --border-hover-color);
+}
+
+.sign-in__email::placeholder {
+    font-size: 16px;
+}
+
+.sign-in__password-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.sign-in__password {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.4px solid var(--border-input-color);
+}
+
+.sign-in__password:hover {
+    border-color:  var( --border-hover-color);
+}
+
+.sign-in__password {
+    font-size: 16px;
+}
+
+.sign-in__password-label {
+    margin-bottom: 10px;
+}
+
+.sign-in__new-customer {
+    margin-top: 30px;
+}
+
+.sign-in__button {
+    width: 100%;
+    background-color: var( --button-bg-color);
+    padding: 10px;
+    font-size: 16px;
+    border: 1.4px solid var(--border-input-color);
+    border-radius: 5px;
+}
+
+.sign-in__button:hover {
+    color: var(--button-hover-color);
+    cursor: pointer;
+    border-color:  var( --border-hover-color);
+}
+
+.sign-in__create-account {
+    text-decoration: none;
+}
+
+@media (max-width: 620px) {
+    .sign-in {
+        width: 400px;
+    }
+}
+
+@media (max-width: 435px) {
+    .sign-in {
+        width: 320px;
+    }
+}

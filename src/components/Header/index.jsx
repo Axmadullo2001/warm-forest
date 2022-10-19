@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 import "./Header.css";
 
@@ -9,8 +10,8 @@ const Header = () => {
         <a href="/" className='header__logo-zankoo'>Zankoo</a>
       </div>
       <div className="header__card-signin">
-        <button className='header__card'>Cart</button>
-        <button className='header__sign-in'>Sign In</button>
+        <Link to="/" className='header__card'>Cart</Link>
+        <Link to="/sign-in" className='header__sign-in'>Sign In</Link>
       </div>
     </div>
   )

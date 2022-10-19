@@ -1,6 +1,10 @@
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
 import CardList from './components/CardList';
 import Footer from "./components/Footer";
+
+import { SignIn } from "./components/SignIn/SignIn";
 
 import "./assets/var.css";
 import './App.css';
@@ -10,7 +14,12 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <CardList />
+
+      <Routes>
+          <Route path="/" element={ <CardList /> } />
+          <Route path="/sign-in" element={ <SignIn /> } />
+      </Routes>
+
       <Footer />
     </div>
   );
