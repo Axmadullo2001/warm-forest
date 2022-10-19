@@ -5,19 +5,15 @@ import CardList from './components/CardList';
 import Footer from "./components/Footer";
 import { SignIn } from "./components/SignIn";
 
-import './App.css';
+import './App.scss';
 import "./assets/var.css";
 
 const App = () => {
   return (
-    <div className="App">
-      <Header />
       <Routes>
           <Route path="/" element={ <CardList /> } />
           <Route path="/sign-in" element={ <SignIn /> } />
       </Routes>
-      <Footer />
-    </div>
   );
 }
 

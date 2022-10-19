@@ -1,84 +1,78 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Form, Formik, Field } from "formik";
-import * as Yup from 'yup';
-
+import { Form, Formik } from "formik";
 import { useNavigate } from "react-router-dom";
 
-import "./SignIn.css";
 import { users } from "../../mocks/users";
+import Header from "../Header";
+import Footer from "../Footer";
+
+import { SignInSchema } from "../../utils/validationSchema";
+
+import login from "./SignIn.module.scss";
 
 export const SignIn = () => {
   let navigate = useNavigate();
-
-  const SignInSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email').required('Required'),
-    password: Yup.string()
-      .min(5, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required('Required'),
-  });
-
-  let err = ''
+  let error = ''
 
   return (
-    <div className="sign-in">
-      <Formik 
-          initialValues={{
-              email: "",
-              password: ""
-          }}
-          validationSchema={SignInSchema}
-          onSubmit={values => {
-            users.map(user => {
-              if (user.password === values.password && user.email === values.email) {
-                navigate("/")
-              }else {
-                err = "Такого пользователя нету в базе!"
-              }
-            })
-          }}
-          >
-            {({ errors, touched }) => (
-                  <Form>
-                    <div>
-                      <h2 className="sign-in__title">Sign In</h2>
-                    </div>
-                    <div className="sign-in__email-content">
-                      <label htmlFor="email" className="sign-in__email-label">
-                        Email
-                      </label>
-                      <Field name="email" placeholder="Enter email" className="sign-in__password" />
-                      <div className="sign-in__email-error sign-in__error">{errors.email && touched.email ? <p>* {errors.email}</p> : null}</div>
-                    </div>
-                    <div className="sign-in__password-content">
-                      <label htmlFor="password" className="sign-in__password-label">
-                        Password
-                      </label>
-                      <Field
-                        type="password"
-                        name="password"
-                        id="password"
-                        className="sign-in__password"
-                        placeholder="Enter password"
-                      />
-                      <div className="sign-in__error">{errors.password && touched.password ? <p>* {errors.password}</p> : null}</div>
-                    </div>
-                    <div>
-                      <button className="sign-in__button">Sign In</button>
-                    </div>
-                    <div className="sign-in__validation">{err ? <p>{ err }</p> : null}</div>
-                    <div className="sign-in__new-customer">
-                      <p>
-                        New customer?
-                        <Link to="/sign-in" className="sign-in__create-account">
-                          Create your account
-                        </Link>
-                      </p>
-                    </div>
-                  </Form>
-            )}
-      </Formik>
-    </div>
+    <>
+        <Header />
+        <div className={login.login}>
+          <Formik 
+              initialValues={{
+                  email: "",
+                  password: ""
+              }}
+              validationSchema={SignInSchema}
+              onSubmit={values => {
+                if (values.email && values.password) {
+                  navigate("/")
+                }
+              }}
+              >
+                {({ errors, touched }) => (
+                      <Form>
+                        <div>
+                          <h2 className={login.login__title}>Sign In</h2>
+                        </div>
+                        <div className={login.login__email_content}>
+                          <label htmlFor="email" className={login.login__email_label}>
+                            Email
+                          </label>
+                          <input name="email" placeholder="Enter email" className={login.login__password} />
+                          <div className={`${login.login__email_error} ${login.login__error}`}>{errors.email && touched.email ? <p>* {errors.email}</p> : null}</div>
+                        </div>
+                        <div className={login.login__password_content}>
+                          <label htmlFor="password" className={login.login__password_label}>
+                            Password
+                          </label>
+                          <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            className={login.login__password}
+                            placeholder="Enter password"
+                          />
+                          <div className={login.login__error}>{errors.password && touched.password ? <p>* {errors.password}</p> : null}</div>
+                        </div>
+                        <div>
+                          <button className={login.login__button}>Sign In</button>
+                        </div>
+                        <div className={login.login__validation}>{error ? <p>{ error }</p>  : null }</div>
+                        <div className={login.login__new_customer}>
+                          <p>
+                            New customer?
+                            <Link to="/login" className={login.login__create_account}>
+                              Create your account
+                            </Link>
+                          </p>
+                        </div>
+                      </Form>
+                )}
+          </Formik>
+        </div>
+        <Footer />
+    </>
   );
 };

@@ -1,0 +1,9 @@
+.footer {
+    background-color: var(--layout-bg-color);
+
+    &__right_saved {
+        text-align: center;
+        color: var(--layout-text-color);
+        padding: 20px;
+    }
+}

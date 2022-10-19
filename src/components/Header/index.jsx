@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-import "./Header.css";
+import header_style from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <div className='header'>
-      <div className="header__logo">
-        <a href="/" className='header__logo-zankoo'>Zankoo</a>
+    <div className={header_style.header}>
+      <div className={header_style.header__logo}>
+        <Link to="/" className={header_style.header__logo_zankoo}>Zankoo</Link>
       </div>
-      <div className="header__card-signin">
-        <Link to="/" className='header__card'>Cart</Link>
-        <Link to="/sign-in" className='header__sign-in'>Sign In</Link>
+      <div className={header_style.header__card_signin}>
+        <Link to="/" className={header_style.header__card}>Cart</Link>
+        <Link to="/sign-in" className={header_style.header__sign_in}>Sign In</Link>
       </div>
     </div>
   )
