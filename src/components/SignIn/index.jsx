@@ -3,9 +3,14 @@ import { Link } from "react-router-dom";
 import { Form, Formik, Field } from "formik";
 import * as Yup from 'yup';
 
+import { useNavigate } from "react-router-dom";
+
 import "./SignIn.css";
+import { users } from "../../mocks/users";
 
 export const SignIn = () => {
+  let navigate = useNavigate();
+
   const SignInSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Required'),
     password: Yup.string()
@@ -14,6 +19,7 @@ export const SignIn = () => {
       .required('Required'),
   });
 
+  let err = ''
 
   return (
     <div className="sign-in">
@@ -24,8 +30,13 @@ export const SignIn = () => {
           }}
           validationSchema={SignInSchema}
           onSubmit={values => {
-            // same shape as initial values
-            console.log(values);
+            users.map(user => {
+              if (user.password === values.password && user.email === values.email) {
+                navigate("/")
+              }else {
+                err = "Такого пользователя нету в базе!"
+              }
+            })
           }}
           >
             {({ errors, touched }) => (
@@ -56,6 +67,7 @@ export const SignIn = () => {
                     <div>
                       <button className="sign-in__button">Sign In</button>
                     </div>
+                    <div className="sign-in__validation">{err ? <p>{ err }</p> : null}</div>
                     <div className="sign-in__new-customer">
                       <p>
                         New customer?
