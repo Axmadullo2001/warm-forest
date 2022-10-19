@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import CardList from './components/CardList';
 import Footer from "./components/Footer";
 
-import { SignIn } from "./components/SignIn/SignIn";
+import { SignIn } from "./components/SignIn";
 
 import "./assets/var.css";
 import './App.css';
