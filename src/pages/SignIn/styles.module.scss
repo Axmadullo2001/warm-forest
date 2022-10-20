@@ -1,0 +1,106 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 580px;
+    height: calc(100vh - 125px);
+
+    &__title {
+        font-size: 18px;
+        margin-top: 26px;
+    }
+
+    &__email_content {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0 20px;
+    }
+
+    &__email_label {
+        margin-bottom: 10px;
+    }
+
+    &__email {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1.4px solid var(--border-input-color);
+    }
+
+    &__email:hover {
+        border-color:  var( --border-hover-color);
+    }
+
+    &__email::placeholder {
+        font-size: 16px;
+    }
+
+    &__password_content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    &__password {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1.4px solid var(--border-input-color);
+    }
+
+    &__password:hover {
+        border-color:  var( --border-hover-color);
+    }
+
+    &__password {
+        font-size: 16px;
+    }
+
+    &__password_label {
+        margin-bottom: 10px;
+    }
+
+    &__error {
+        margin-top: 8px;
+        color: var(--input-exception-color);
+    }
+
+    &__new_customer {
+        margin-top: 30px;
+    }
+
+    &__button {
+        width: 100%;
+        background-color: var( --button-bg-color);
+        padding: 10px;
+        font-size: 16px;
+        border: 1.4px solid var(--border-input-color);
+        border-radius: 5px;
+    }
+
+    &__button:hover {
+        color: var(--button-hover-color);
+        cursor: pointer;
+        border-color:  var( --border-hover-color);
+    }
+
+    &__create_account {
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    &__validation {
+        margin-top: 10px;
+        color: var(--input-exception-color);
+    }
+}
+
+@media (max-width: 620px) {
+  .login {
+      width: 400px;
+  }
+}
+
+@media (max-width: 435px) {
+  .login {
+      width: 320px;
+  }
+}

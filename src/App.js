@@ -1,18 +1,17 @@
-import Header from "./components/Header";
-import CardList from './components/CardList';
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
 
+import HomePage from './pages/HomePage';
+import { SignIn } from "./pages/SignIn";
+
+import './App.scss';
 import "./assets/var.css";
-import './App.css';
 
 const App = () => {
-
   return (
-    <div className="App">
-      <Header />
-      <CardList />
-      <Footer />
-    </div>
+      <Routes>
+          <Route path="/" element={ <HomePage /> } />
+          <Route path="/sign-in" element={ <SignIn /> } />
+      </Routes>
   );
 }
 

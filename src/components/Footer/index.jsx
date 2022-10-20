@@ -1,11 +1,12 @@
 import React from 'react'
-import "./Footer.css";
+
+import s from "./styles.module.scss";
 
 const Footer = () => {
     return (
-    <div className='footer'>
-        <p className="footer__right-saved">All right reserved</p>
-    </div>
+    <footer className={s.footer}>
+        <p className={s.footer__right_saved}>All right reserved</p>
+    </footer>
     )
 }
 

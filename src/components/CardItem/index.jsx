@@ -1,26 +1,28 @@
-import { config } from "../../mocks";
-import "./CardItem.css";
+import { NavLink } from "react-router-dom";
 
+import { config } from "../../mocks";
+
+import s from "./styles.module.scss";
 
 const CardItem = (props) => {
     const { img, name, price, reviews } = props
 
     return (
-        <div className='card-item'>
-            <div className='card-item__img-block'>
-                <img className='card-item__img' src={ img } alt={ name } />
+        <div className={s.card_item}>
+            <div className={s.card_item__img_block}>
+                <img className={s.card_item__img} src={ img } alt={ name } />
             </div>
 
-            <div className='card-item__body'>
-                <p className='card-item__name'><a  className='card-item__name-link' href="/">{ name }</a></p>
-                <div className='card-item__reviews'>
+            <div className={s.card_item__body}>
+                <p className={s.card_item__name}><NavLink to="/"  className={s.card_item__name_link}>{ name }</NavLink></p>
+                <div className={s.card_item__reviews}>
                     {config.map(star => (
-                        <img className="card-item__star" key={ star.id } src={ star.src } alt={''} />
+                        <img className={s.card_item__star} key={ star.id } src={ star.src } alt={''} />
                     ))}
 
-                    <span className='card-item__reviews'>{ reviews } reviews</span>
+                    <span className={s.card_item__reviews}>{ reviews } reviews</span>
                 </div>
-                <p className='card-item__price'>${ price }</p>
+                <p className={s.card_item__price}>${ price }</p>
 
             </div>
         </div>
