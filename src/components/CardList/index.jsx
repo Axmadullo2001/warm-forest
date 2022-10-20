@@ -5,13 +5,13 @@ import { goods } from '../../mocks/'
 import Header from '../Header';
 import Footer from '../Footer';
 
-import card_list from "./CardList.module.scss";
+import s from "./styles.module.scss";
 
 const CardList = () => {
     return (
         <>
             <Header />
-            <div className={card_list.cardlist_container}>
+            <div className={s.cardlist_container}>
                 {goods.map((good) => (
                     <CardItem key={ good.id } { ...good } />
                     ))}

@@ -1,9 +1,13 @@
-import * as Yup from 'yup';
+import * as yup from "yup";
 
-export const SignInSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email').required('Required'),
-    password: Yup.string()
-      .min(5, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required('Required'),
-  });
+export const schema = yup
+    .object({
+        email: yup.string()
+        .required().min(3, "Too less")
+        .max(40, "Too more"),
+
+        password: yup.string()
+        .required().min(4, "Too less")
+        .max(40, "Too more"),
+    })
+    .required();

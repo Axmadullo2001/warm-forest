@@ -1,17 +1,17 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
-import header_style from "./Header.module.scss";
+import s from "./styles.module.scss";
 
 const Header = () => {
   return (
-    <div className={header_style.header}>
-      <div className={header_style.header__logo}>
-        <Link to="/" className={header_style.header__logo_zankoo}>Zankoo</Link>
+    <div className={s.header}>
+      <div className={s.header__logo}>
+        <NavLink to="/" className={s.header__logo_zankoo}>Zankoo</NavLink>
       </div>
-      <div className={header_style.header__card_signin}>
-        <Link to="/" className={header_style.header__card}>Cart</Link>
-        <Link to="/sign-in" className={header_style.header__sign_in}>Sign In</Link>
+      <div className={s.header__card_signin}>
+        <NavLink to="/" className={s.header__card}>Cart</NavLink>
+        <NavLink to="/sign-in" className={s.header__sign_in}>Sign In</NavLink>
       </div>
     </div>
   )
