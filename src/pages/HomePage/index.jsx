@@ -1,13 +1,13 @@
 import React from 'react'
-import CardItem from "../CardItem"
+import CardItem from "../../components/CardItem"
 
-import { goods } from '../../mocks/'
-import Header from '../Header';
-import Footer from '../Footer';
+import { goods } from '../../mocks'
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import s from "./styles.module.scss";
 
-const CardList = () => {
+const HomePage = () => {
     return (
         <>
             <Header />
@@ -21,4 +21,4 @@ const CardList = () => {
     )
 }
 
-export default CardList
+export default HomePage
