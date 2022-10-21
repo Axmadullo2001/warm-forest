@@ -1,9 +1,11 @@
 .footer {
     background-color: var(--layout-bg-color);
+    font-family: Helvetica, Arial, sans-serif;
+    position: absolute;
+    width: 100%;
 
     &__right_saved {
         text-align: center;
         color: var(--layout-text-color);
-        padding: 20px;
     }
 }

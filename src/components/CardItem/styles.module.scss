@@ -37,6 +37,11 @@
         margin: 20px 0 0px 6px;
     }
 
+    &__name_link:hover {
+        color: var(--link-hover-item);
+        transition: .3s ease-in;
+    } 
+
     &__star {
         width: 18px;
         height: 18px;
