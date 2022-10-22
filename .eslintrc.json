@@ -18,5 +18,13 @@
     },
     "plugins": [
         "react"
-    ]
+    ],
+    "rules": {
+        "comma-dangle": ["error", "never"],
+        "semi": ["error", "never"],
+        "quotes": ["error", "single"],
+        "react/react-in-jsx-scope": "off",
+        "react/display-name": ["off"],
+        "space-before-function-paren": ["error"]
+    }
 }

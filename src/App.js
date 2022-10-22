@@ -1,10 +1,8 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React from "react"
+import { Routes, Route } from "react-router-dom"
 
-import HomePage from './pages/HomePage';
-import { SignIn } from "./pages/SignIn";
-
-import "./assets/var.css";
+import HomePage from './pages/HomePage'
+import { SignIn } from "./pages/SignIn"
 
 const App = () => {
   return (

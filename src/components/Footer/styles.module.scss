@@ -1,10 +1,13 @@
+@import "../../scss/variables";
+
 .footer {
-    background-color: var(--layout-bg-color);
+    background-color: $layout-bg;
     position: absolute;
     width: 100%;
 
     &__right_saved {
         text-align: center;
-        color: var(--layout-text-color);
+        color: $layout-text-color;
+        padding: 10px;
     }
 }
