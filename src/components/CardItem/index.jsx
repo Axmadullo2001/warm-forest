@@ -1,4 +1,6 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import { config } from "../../mocks";
 
@@ -6,7 +8,6 @@ import s from "./styles.module.scss";
 
 const CardItem = (props) => {
     const { img, name, price, reviews } = props
-
     return (
         <div className={s.card_item}>
             <div className={s.card_item__img_block}>
@@ -19,14 +20,19 @@ const CardItem = (props) => {
                     {config.map(star => (
                         <img className={s.card_item__star} key={ star.id } src={ star.src } alt={''} />
                     ))}
-
                     <span className={s.card_item__reviews}>{ reviews } reviews</span>
                 </div>
                 <p className={s.card_item__price}>${ price }</p>
-
             </div>
         </div>
     )
+}
+
+CardItem.propTypes = {
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    reviews: PropTypes.number.isRequired,
 }
 
 export default CardItem
