@@ -1,10 +1,10 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import PropTypes from 'prop-types';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-import { config } from "../../mocks";
+import { config } from '../../mocks'
 
-import s from "./styles.module.scss";
+import s from './styles.module.scss'
 
 const CardItem = (props) => {
     const { img, name, price, reviews } = props
@@ -32,7 +32,7 @@ CardItem.propTypes = {
     img: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    reviews: PropTypes.number.isRequired,
+    reviews: PropTypes.number.isRequired
 }
 
 export default CardItem
