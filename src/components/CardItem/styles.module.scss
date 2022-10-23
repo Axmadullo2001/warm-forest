@@ -1,5 +1,7 @@
+@import "../../scss/variables";
+
 .card_item {
-    border: 1px solid var(--border-bg-color);
+    border: 1px solid $border-bg-color;
     margin: 10px;
     border-radius: 5px;
     width: 300px;
@@ -19,7 +21,7 @@
     }
 
     &__body {
-        background-color: var(--card_body-bg-color);
+        background-color: $card-body-bg-color;
         padding: 20px 0 14px 6px;
     }
 
@@ -32,17 +34,21 @@
     &__name_link {
         font-size: 17px;
         text-decoration: none;
-        color: var(--card-text-color);
+        color: $card-text-color;
         font-weight: bold;
         margin: 20px 0 0px 6px;
     }
+
+    &__name_link:hover {
+        color: $link-hover-item;
+        transition: .3s ease-in;
+    } 
 
     &__star {
         width: 18px;
         height: 18px;
         margin: 0 1px;
     }
-
 
     &__reviews {
         display: flex;

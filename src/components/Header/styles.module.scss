@@ -1,9 +1,11 @@
+@import "../../scss/variables";
+
 .header {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
-    background-color: var(--layout-bg-color);
+    background-color: $layout-bg;
     margin-bottom: 10px;
 
     &__logo {
@@ -14,7 +16,7 @@
         font-size: 2rem;
         font-weight: 700;
         text-decoration: none;
-        color: var(--layout-text-color);
+        color: $layout-text-color;
     }
 
     &__card_signin {
@@ -22,13 +24,15 @@
     }
 
     &__card, &__sign_in {
-        color: var(--layout-text-color);
+        color: $layout-text-color;
         padding: 0 10px;
-        background-color: transparent;
         border: none;
         font-size: 16px;
         cursor: pointer;
         text-decoration: none;
-
+    }
+    &__card:hover, &__sign_in:hover {
+        color: $link-hover-item;
+        transition: .3s ease-in;
     }
 }

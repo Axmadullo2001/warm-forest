@@ -1,9 +1,11 @@
+@import "../../scss/variables";
+
 .login {
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 580px;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 122px);
 
     &__title {
         font-size: 18px;
@@ -23,11 +25,11 @@
     &__email {
         padding: 10px;
         border-radius: 5px;
-        border: 1.4px solid var(--border-input-color);
+        border: 1.4px solid $border-input-color;
     }
 
     &__email:hover {
-        border-color:  var( --border-hover-color);
+        border-color:  $border-hover-color;
     }
 
     &__email::placeholder {
@@ -43,11 +45,11 @@
     &__password {
         padding: 10px;
         border-radius: 5px;
-        border: 1.4px solid var(--border-input-color);
+        border: 1.4px solid $border-input-color;
     }
 
     &__password:hover {
-        border-color:  var( --border-hover-color);
+        border-color:  $border-hover-color;
     }
 
     &__password {
@@ -60,7 +62,7 @@
 
     &__error {
         margin-top: 8px;
-        color: var(--input-exception-color);
+        color: $input-exception-color;
     }
 
     &__new_customer {
@@ -69,17 +71,17 @@
 
     &__button {
         width: 100%;
-        background-color: var( --button-bg-color);
+        background-color: $button-bg-color;
         padding: 10px;
         font-size: 16px;
-        border: 1.4px solid var(--border-input-color);
+        border: 1.4px solid $border-input-color;
         border-radius: 5px;
     }
 
     &__button:hover {
-        color: var(--button-hover-color);
+        color: $button-hover-color;
         cursor: pointer;
-        border-color:  var( --border-hover-color);
+        border-color:  $border-hover-color;
     }
 
     &__create_account {
@@ -89,7 +91,7 @@
 
     &__validation {
         margin-top: 10px;
-        color: var(--input-exception-color);
+        color: $input-exception-color;
     }
 }
 

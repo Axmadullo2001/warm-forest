@@ -1,11 +1,11 @@
 import React from 'react'
-import CardItem from "../../components/CardItem"
+import CardItem from '../../components/CardItem'
 
 import { goods } from '../../mocks'
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
-import s from "./styles.module.scss";
+import s from './styles.module.scss'
 
 const HomePage = () => {
     return (
