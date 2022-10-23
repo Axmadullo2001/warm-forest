@@ -7,12 +7,18 @@ import './scss/main.scss'
 
 import App from './App'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+let virtualVar = document.getElementById('root')
 
-root.render(
-  <React.StrictMode>
-      <Router>
-          <App />
-      </Router>
-  </React.StrictMode>
-)
+if (virtualVar !== null) {
+  const root = ReactDOM.createRoot(virtualVar)
+
+  root.render(
+    <React.StrictMode>
+        <Router>
+            <App />
+        </Router>
+    </React.StrictMode>
+  )
+}
+
+
