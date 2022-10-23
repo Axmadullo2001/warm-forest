@@ -25,6 +25,6 @@
         "quotes": ["error", "single"],
         "react/react-in-jsx-scope": "off",
         "react/display-name": ["off"],
-        "space-before-function-paren": ["error"]
+        "space-before-function-parent": ["error"]
     }
 }
