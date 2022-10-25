@@ -8,6 +8,7 @@ import s from './styles.module.scss'
 
 const CardItem = (props) => {
     const { img, name, price, reviews } = props
+
     return (
         <div className={s.card_item}>
             <div className={s.card_item__img_block}>
