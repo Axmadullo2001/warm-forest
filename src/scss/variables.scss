@@ -1,11 +1,16 @@
-$layout-bg:  #203040;                                  // header/footer
-$layout-text-color: #fff;                              // text-header/footer
+$rebeccapurple: rebeccapurple;
+$layout-bg:  #203040;                       // header/footer-bg
+$white: #fff;
+$black: rgb(0, 0, 0);
+$red: rgb(255, 0, 0);
 $link-hover-item: #ff8000;                         // hover-color
 $border-bg-color:  rgb(179, 179, 179);      // card-border-color
 $card-body-bg-color: #f8f8f8;                  // card-body-bg
 $card-text-color: #2020a0;                          // card-text-color
 $border-hover-color: #5a5a5a;                   // input hover border
-$input-exception-color: rgb(255, 0, 0);    // exception text color
 $button-bg-color: #f0c040;                          // button background
-$border-input-color: rgb(192, 192, 192);    // input border color 
-$button-hover-color: rgb(0, 0, 0);              // button hover color
+$border-input-color: rgb(192, 192, 192);    // input border color
+$input-focus-bg: rgba(209, 37, 37, 0.7);
+$input-bottom-border: rgba(255,255,255,.5);
+$input-transition: cubic-bezier(0, 0.110, 0.35, 2);
+$light: #D3DEEA;

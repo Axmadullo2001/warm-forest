@@ -16,7 +16,7 @@
         font-size: 2rem;
         font-weight: 700;
         text-decoration: none;
-        color: $layout-text-color;
+        color: $white;
     }
 
     &__card_signin {
@@ -24,7 +24,7 @@
     }
 
     &__card, &__sign_in {
-        color: $layout-text-color;
+        color: $white;
         padding: 0 10px;
         border: none;
         font-size: 16px;
