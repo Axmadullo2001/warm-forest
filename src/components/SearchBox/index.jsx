@@ -3,13 +3,15 @@ import PropTypes from 'prop-types'
 
 import s from './styles.module.scss'
 
-const SearchBox = ({
-  handleSearch,
-  searchFilter,
-  setSearchFilter
-}) => {
+const SearchBox = (props) => {
+  const {
+    handleSearch,
+    searchFilter,
+    setSearchFilter
+  } = props
 
-    const onSubmit = (e) => {
+
+  const onSubmit = (e) => {
     e.preventDefault()
   }
 

@@ -62,7 +62,7 @@
     }
 
     &__input_search::placeholder{
-        color:rgba(255,255,255,.5);
+        color: $input-bottom-border;
         font-size: 18px;
         letter-spacing: 2px;
         font-weight: 100;
@@ -71,9 +71,9 @@
     &__input_search:focus {
         width: 300px;
         border-radius: 0px;
-        border-bottom:1px solid rgba(255,255,255,.5);
-        background-color: rgba(209, 37, 37, 0.4);
-        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        border-bottom:1px solid $input-bottom-border;
+        background-color: $input-focus-bg;
+        transition: all 500ms $input-transition;
     }
 }
 

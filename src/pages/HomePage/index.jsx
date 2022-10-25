@@ -5,9 +5,9 @@ import Header from '../../components/Header'
 import SearchBox from '../../components/SearchBox'
 import Footer from '../../components/Footer'
 
-import s from './styles.module.scss'
-
 import { goods } from '../../mocks'
+
+import s from './styles.module.scss'
 
 
 const HomePage = () => {
