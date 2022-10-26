@@ -2,11 +2,11 @@
 
 .footer {
     background-color: $layout-bg;
-    width: 100%;
+    padding: 10px;
 
     &__right_saved {
         text-align: center;
-        color: $layout-text-color;
+        color: $white;
         padding: 10px;
     }
 }
