@@ -1,86 +1,85 @@
 @import "../../scss/variables";
 
 .search {
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+  }
+
+  &__box {
+    width: fit-content;
+    height: fit-content;
     position: relative;
+  }
 
-    &__form {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 5px;
-    }
+  &__btn {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    pointer-events: painted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &__box {
-        width: fit-content;
-        height: fit-content;
-        position: relative;
-    }
+  &__svg_element {
+    width: 30px;
+    height: 30px;
+  }
 
-    &__btn {
-        width: 50px;
-        height: 50px;
-        border-style: none;
-        font-size: 20px;
-        font-weight: bold;
-        outline: none;
-        cursor: pointer;
-        border-radius: 50%;
-        position: absolute;
-        right: 0;
-        top: 0px;
-        pointer-events: painted;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  &__btn:focus ~ &__input_search {
+    width: 300px;
+    border-radius: 0px;
+    border-bottom: 1px solid $input-bottom-border;
+    transition: all 500ms $input-transition;
+    background-color: $input-focus-bg;
+  }
 
-    }
-    
-    &__svg_element {
-        width: 30px;
-        height: 30px;
-    }
+  &__input_search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    background-color: $black;
+    padding-right: 40px;
+  }
 
-    &__btn:focus ~ &__input_search {
-        width: 300px;
-        border-radius: 0px;
-        border-bottom: 1px solid $input-bottom-border;
-        transition: all 500ms $input-transition;
-        background-color: $input-focus-bg;
-    }
+  &__input_search::placeholder {
+    color: $input-bottom-border;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
 
-    &__input_search {
-        height: 50px;
-        width: 50px;
-        border-style: none;
-        padding: 10px;
-        font-size: 18px;
-        letter-spacing: 2px;
-        outline: none;
-        border-radius: 25px;
-        transition: all .5s ease-in-out;
-        background-color: $black;
-        padding-right: 40px;
-    }
-
-    &__input_search::placeholder{
-        color: $input-bottom-border;
-        font-size: 18px;
-        letter-spacing: 2px;
-        font-weight: 100;
-    }
-
-    &__input_search:focus {
-        width: 300px;
-        border-radius: 0px;
-        border-bottom:1px solid $input-bottom-border;
-        background-color: $input-focus-bg;
-        transition: all 500ms $input-transition;
-    }
+  &__input_search:focus {
+    width: 300px;
+    border-radius: 0px;
+    border-bottom: 1px solid $input-bottom-border;
+    background-color: $input-focus-bg;
+    transition: all 500ms $input-transition;
+  }
 }
 
 @media (max-width: 992px) {
-    .search {
-        &__form {
-            justify-content: center;
-        }
+  .search {
+    &__container {
+      justify-content: center;
     }
+  }
 }

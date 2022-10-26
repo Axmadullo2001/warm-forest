@@ -11,7 +11,7 @@ const SearchBox = (props) => {
 
   return (
     <div className={s.search}>
-      <div className={s.search__form}>
+      <div className={s.search__container}>
         <div className={s.search__box}>
           <button className={s.search__btn}>
             <svg
