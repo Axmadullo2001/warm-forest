@@ -5,7 +5,6 @@ import s from './styles.module.scss'
 
 const SearchBox = (props) => {
   const {
-    handleSearch,
     searchFilter,
     setSearchFilter
   } = props
@@ -40,10 +39,7 @@ const SearchBox = (props) => {
             className={s.search__input_search}
             placeholder="Type to Search..."
             value={searchFilter}
-            onChange={(e) => {
-              setSearchFilter(e.target.value)
-              handleSearch()
-            }}
+            onChange={(e) => setSearchFilter(e.target.value)}
           />
         </div>
       </form>
