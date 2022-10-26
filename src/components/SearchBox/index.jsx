@@ -9,14 +9,9 @@ const SearchBox = (props) => {
     setSearchFilter
   } = props
 
-
-  const onSubmit = (e) => {
-    e.preventDefault()
-  }
-
   return (
     <div className={s.search}>
-      <form className={s.search__form} onSubmit={onSubmit}>
+      <div className={s.search__form}>
         <div className={s.search__box}>
           <button className={s.search__btn}>
             <svg
@@ -42,7 +37,7 @@ const SearchBox = (props) => {
             onChange={(e) => setSearchFilter(e.target.value)}
           />
         </div>
-      </form>
+      </div>
     </div>
   )
 }
