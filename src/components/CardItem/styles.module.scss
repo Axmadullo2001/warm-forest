@@ -1,70 +1,34 @@
-@import "../../scss/variables";
-
 .card_item {
-    border: 1px solid $border-bg-color;
-    margin: 10px;
-    border-radius: 5px;
-    width: 300px;
-    cursor: pointer;
-    display: grid;
-    gap: 20px 20px;
-
-    &__img_block {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    max-width: 500px;
+    margin: 15px;
+    border: 2px solid #f5f5f5;
+    padding: 0 0px 20px;
+    height: max-content;
 
     &__img {
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
     }
 
-    &__body {
-        background-color: $card-body-bg-color;
-        padding: 20px 0 14px 6px;
+    &__extra_info {
+        padding: 20px 20px 0px;
     }
 
-    &__name {
-        margin-left: 4px;
-        margin-top: 15px;
-        padding-bottom: 8px;
+    &__desc_text {
+        font-size: 16px;
+        margin: 20px 0;
     }
 
-    &__name_link {
-        font-size: 17px;
-        text-decoration: none;
-        color: $card-text-color;
-        font-weight: bold;
-        margin: 20px 0 0px 6px;
-    }
-
-    &__name_link:hover {
-        color: $link-hover-item;
-        transition: .3s ease-in;
-    } 
-
-    &__star {
-        width: 18px;
-        height: 18px;
-        margin: 0 1px;
-    }
-
-    &__reviews {
+    &__star_img {
         display: flex;
-        font-size: 17px;
-        padding-left: 8px;
-        padding-bottom: 1px;
-        margin-top: 13px;
+        margin: 0px 0 15px;
     }
 
-    &__star {
-        margin-top: 12px;
+    &__star_icon {
+        width: 25px;
     }
 
-    &__price {
-        padding-left: 10px;
-        margin-top: 10px;
-        font-size: 22px;
+    &__hashtag {
+        border-bottom: 1px solid #000;
+        color: blue;
     }
 }
