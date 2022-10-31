@@ -1,5 +1,4 @@
 import React from 'react'
-
 import PropTypes from 'prop-types'
 
 import s from './styles.module.scss'
@@ -10,7 +9,7 @@ const Pagination = (props) => {
 
   const pageNumbers = []
 
-  for (let i = 1; i <= Math.floor(totalProducts / productsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
     pageNumbers.push(i)
   }
 
