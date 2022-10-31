@@ -1,88 +1,40 @@
 import React from 'react'
-import classnames from 'classnames'
 
 import PropTypes from 'prop-types'
 
-import { usePagination, DOTS } from './usePagination'
+import s from './styles.module.scss'
 
 
 const Pagination = (props) => {
-  const {
-    onPageChange,
-    totalCount,
-    siblingCount = 1,
-    currentPage,
-    pageSize,
-    className
-  } = props
+  const { productsPerPage, totalProducts, paginate } = props
 
-  const paginationRange = usePagination({
-    currentPage,
-    totalCount,
-    siblingCount,
-    pageSize
-  })
+  const pageNumbers = []
 
-  if (currentPage === 0 || paginationRange.length < 2) {
-    return null
+  for (let i = 1; i <= Math.floor(totalProducts / productsPerPage); i++) {
+    pageNumbers.push(i)
   }
 
-  const onNext = () => {
-    onPageChange(currentPage + 1)
-  }
 
-  const onPrevious = () => {
-    onPageChange(currentPage - 1)
-  }
-
-  let lastPage = paginationRange[paginationRange.length - 1]
   return (
-    <ul
-      className={classnames('pagination-container', { [className]: className })}
-    >
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === 1
-        })}
-        onClick={onPrevious}
-      >
-        <div className="arrow left" />
-      </li>
-      {paginationRange.map(pageNumber => {
-        if (pageNumber === DOTS) {
-          return <li className="pagination-item dots">&#8230;	</li>
-        }
-
-        return (
-          <li key={pageNumber}
-            className={classnames('pagination-item', {
-              selected: pageNumber === currentPage
-            })}
-            onClick={() => onPageChange(pageNumber)}
-          >
-            {pageNumber}
+    <div>
+      <ul className={s.pagination}>
+        {pageNumbers.map(number => (
+          <li key={number} className={s.pagination__page_item}>
+            <button className={s.pagination__page_link} onClick={ () => paginate(number) }>
+              {number}
+            </button>
           </li>
-        )
-      })}
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === lastPage
-        })}
-        onClick={onNext}
-      >
-        <div className="arrow right" />
-      </li>
-    </ul>
+        ))}
+      </ul>
+    </div>
   )
 }
 
-Pagination.propTypes = {
-  onPageChange: PropTypes.func,
-  totalCount: PropTypes.number,
-  siblingCount: PropTypes.number,
-  currentPage: PropTypes.number,
-  pageSize: PropTypes.number,
-  className: PropTypes.string.isRequired
-}
-
 export default Pagination
+
+
+Pagination.propTypes = {
+  productsPerPage: PropTypes.number.isRequired,
+  totalProducts: PropTypes.number.isRequired,
+  paginate: PropTypes.func
+}

@@ -1,0 +1,14 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &__page_item {
+        margin: 0 20px;
+    }
+
+    &__page_link {
+        padding: 15px;
+        border: 1px solid #f5f5f5;
+    }
+}
