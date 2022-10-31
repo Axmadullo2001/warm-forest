@@ -16,7 +16,7 @@ import s from './styles.module.scss'
 
 const HomePage = () => {
     const [searchFilter, setSearchFilter] = useState('')
-    const [data, setData] = useState([])
+    let [data, setData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
     const productPerPage = 4
 
@@ -30,12 +30,15 @@ const HomePage = () => {
 
     useEffect(() => {
         axios.get(apiUrl).then((resp) => {
-            const allProducts = resp.data
-            const filteredPeople = allProducts.filter(n => n.description.toLowerCase().includes(searchFilter.toLowerCase()))
+            data = resp.data
+            const filteredPeople = data.filter(n => n.title.toLowerCase().includes(searchFilter.toLowerCase()))
             setData(filteredPeople)
         })
 
     }, [searchFilter])
+
+    console.log(data)
+    console.log(currentProduct)
 
 
     return (

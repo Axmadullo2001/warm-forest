@@ -9,6 +9,7 @@ const SearchBox = (props) => {
     setSearchFilter
   } = props
 
+
   return (
     <div className={s.search}>
       <div className={s.search__container}>
