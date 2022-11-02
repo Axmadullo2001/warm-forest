@@ -1,3 +1,6 @@
+import s from './styles.module.scss'
+
+
 export const Pagination = (props) => {
 
   //eslint-disable-next-line react/prop-types
@@ -18,20 +21,21 @@ export const Pagination = (props) => {
   const buttons = (totalPages) => {
     let content = []
     for (let i = 1; i <= totalPages; i++) {
-      content.push(<button key={i} onClick={ () => setCurrentPage(i)}>{i}</button>)
+      content.push(<button className={s.pagination__button} key={i} onClick={
+        () => setCurrentPage(i)}>{i}</button>)
     }
     return content
   }
 
   return (
-    <div>
-      <button onClick={() => prevPage()}>
+    <div className={s.pagination}>
+      <button className={s.pagination__button} onClick={() => prevPage()}>
         PREV
       </button>
       {
         buttons(totalPages)
       }
-      <button onClick={() => nextPage()}>
+      <button className={s.pagination__button} onClick={() => nextPage()}>
         Next
       </button>
     </div>
