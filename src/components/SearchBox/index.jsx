@@ -6,8 +6,14 @@ import s from './styles.module.scss'
 const SearchBox = (props) => {
   const {
     searchFilter,
-    setSearchFilter
+    setSearchFilter,
+    searchItems
   } = props
+
+  const handleSearch = (e) => {
+    setSearchFilter(e.target.value)
+    searchItems()
+  }
 
   return (
     <div className={s.search}>
@@ -34,7 +40,7 @@ const SearchBox = (props) => {
             className={s.search__input_search}
             placeholder="Type to Search..."
             value={searchFilter}
-            onChange={(e) => setSearchFilter(e.target.value)}
+            onChange={ handleSearch }
           />
         </div>
       </div>
@@ -44,7 +50,7 @@ const SearchBox = (props) => {
 
 SearchBox.propTypes = {
     searchFilter: PropTypes.string.isRequired,
-    handleSearch: PropTypes.func,
+    searchItems: PropTypes.func,
     setSearchFilter: PropTypes.func
 }
 
