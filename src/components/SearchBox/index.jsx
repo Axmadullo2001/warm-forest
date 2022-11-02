@@ -10,13 +10,10 @@ const SearchBox = (props) => {
     searchItems
   } = props
 
-<<<<<<< HEAD
-=======
   const handleSearch = (e) => {
     setSearchFilter(e.target.value)
     searchItems()
   }
->>>>>>> 6878b3080bcbde9085b15685cece2bdee8bd6c0f
 
   return (
     <div className={s.search}>
