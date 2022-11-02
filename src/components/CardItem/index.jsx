@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { config } from '../../mocks'
 
 const CardItem = (props) => {
+    console.log(props)
     const { img, name, price, reviews } = props
 
     return (
