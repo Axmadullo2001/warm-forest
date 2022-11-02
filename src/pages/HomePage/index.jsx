@@ -3,9 +3,9 @@ import axios from 'axios'
 
 import CardItem from '../../components/CardItem'
 import Header from '../../components/Header'
+import {Pagination} from '../../components/Pagination'
 import SearchBox from '../../components/SearchBox'
 import Footer from '../../components/Footer'
-import {Pagination} from '../../components/Pagination'
 
 import { url } from '../../api/example'
 
@@ -19,8 +19,11 @@ const HomePage = () => {
     const [ totalPages, setTotalPages] = useState(4)
 
     useEffect(() => {
+        const filteredPeople = searchedData.filter(n => n.first_name.toLowerCase().includes(searchFilter.toLowerCase()))
+        setSearchedData(filteredPeople)
+    }, [searchFilter])
 
-      axios.get(`${url}users`, {
+    axios.get(`${url}users`, {
         params: {
             per_page: 3,
             page: currentPage
@@ -29,9 +32,8 @@ const HomePage = () => {
         .then((response) => {
           setTotalPages(response.data.total_pages)
           setSearchedData(response.data.data)
-      })
-
-    }, [currentPage, searchFilter])
+        })
+    , [currentPage, searchFilter]
 
     const searchItems = () => {
         if (searchFilter) {
