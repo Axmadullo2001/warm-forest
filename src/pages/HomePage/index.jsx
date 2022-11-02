@@ -37,9 +37,6 @@ const HomePage = () => {
 
     }, [searchFilter])
 
-    console.log(data)
-    console.log(currentProduct)
-
 
     return (
         <>
