@@ -16,7 +16,7 @@ const HomePage = () => {
     const [ searchedData, setSearchedData ] = useState([])
     const [ searchFilter, setSearchFilter ] = useState('')
     const [ currentPage, setCurrentPage ] = useState(1)
-    const [ totalPages, setTotalPages] = useState(4)
+    const [ totalPages, setTotalPages] = useState(1)
 
     useEffect(() => {
         const filteredPeople = searchedData.filter(n => n.first_name.toLowerCase().includes(searchFilter.toLowerCase()))
@@ -25,7 +25,7 @@ const HomePage = () => {
 
     axios.get(`${url}users`, {
         params: {
-            per_page: 3,
+            per_page: 4,
             page: currentPage
         }
       })
