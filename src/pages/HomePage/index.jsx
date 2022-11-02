@@ -1,40 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-
 
 import CardItem from '../../components/CardItem'
 import Header from '../../components/Header'
 import SearchBox from '../../components/SearchBox'
 import Footer from '../../components/Footer'
+import {Pagination} from '../../components/Pagination'
 
-import { apiUrl } from '../../mocks'
-
-import Pagination from '../../components/Pagination'
+import { goods } from '../../mocks'
 
 import s from './styles.module.scss'
 
 
 const HomePage = () => {
-    const [searchFilter, setSearchFilter] = useState('')
-    let [data, setData] = useState([])
-    const [currentPage, setCurrentPage] = useState(1)
-    const productPerPage = 4
-
-
-    const lastProductIndex = currentPage * productPerPage
-    const firstProductIndex = lastProductIndex - productPerPage
-    const currentProduct = data.slice(firstProductIndex, lastProductIndex)
-
-    const paginate = pageNumber => setCurrentPage(pageNumber)
-
+    const [ searchedData, setSearchedData ] = useState(goods)
+    const [ searchFilter, setSearchFilter ] = useState('')
 
     useEffect(() => {
-        axios.get(apiUrl).then((resp) => {
-            data = resp.data
-            const filteredPeople = data.filter(n => n.title.toLowerCase().includes(searchFilter.toLowerCase()))
-            setData(filteredPeople)
-        })
-
+        const filteredPeople = goods.filter(n => n.name.toLowerCase().includes(searchFilter.toLowerCase()))
+        setSearchedData(filteredPeople)
     }, [searchFilter])
 
 
@@ -42,17 +25,12 @@ const HomePage = () => {
         <>
             <Header />
             <SearchBox
-                setSearchFilter={setSearchFilter}
-                searchFilter={searchFilter}
+            setSearchFilter={setSearchFilter}
+            searchFilter={searchFilter}
             />
             <div className={s.card_list_container}>
                 {currentProduct.map(item => <CardItem key={item.id} {...item} />)}
             </div>
-            <Pagination
-                productsPerPage={productPerPage}
-                totalProducts={data.length}
-                paginate={paginate}
-            />
             <Footer />
         </>
     )
