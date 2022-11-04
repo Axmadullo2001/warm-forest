@@ -7,33 +7,33 @@ import { config } from '../../mocks'
 import s from './styles.module.scss'
 
 const CardItem = (props) => {
-    const { img, name, price, reviews } = props
+    const { avatar, first_name, last_name } = props
 
     return (
         <div className={s.card_item}>
             <div className={s.card_item__img_block}>
-                <img className={s.card_item__img} src={ img } alt={ name } />
+                <img className={s.card_item__img} src={ avatar } alt='avatar' />
             </div>
 
             <div className={s.card_item__body}>
-                <p className={s.card_item__name}><NavLink to="/"  className={s.card_item__name_link}>{ name }</NavLink></p>
+                <p className={s.card_item__name}><NavLink to="/"  className={s.card_item__name_link}>{ first_name }</NavLink></p>
                 <div className={s.card_item__reviews}>
                     {config.map(star => (
                         <img className={s.card_item__star} key={ star.id } src={ star.src } alt={''} />
                     ))}
-                    <span className={s.card_item__reviews}>{ reviews } reviews</span>
+                    <span className={s.card_item__reviews}>{ last_name } reviews</span>
                 </div>
-                <p className={s.card_item__price}>${ price }</p>
+                <p className={s.card_item__price}>${ first_name }</p>
             </div>
         </div>
     )
 }
 
 CardItem.propTypes = {
-    img: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    reviews: PropTypes.number.isRequired
+    avatar: PropTypes.string.isRequired,
+    first_name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    last_name: PropTypes.string.isRequired
 }
 
 export default CardItem
